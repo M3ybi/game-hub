@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: game-hub-web
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TOWER_DEFENSE_URL
+        value: https://tower-defense-web.onrender.com/
+      - key: TAPTILES_URL
+        sync: false

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101416" />
+    <title>Game Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/main.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Shared launcher</p>
+          <h1>Game Hub</h1>
+        </div>
+        <span id="status" class="status">Loading links</span>
+      </header>
+
+      <section class="game-grid" aria-label="Available games">
+        <article class="game-card game-card--tower">
+          <div>
+            <p class="eyebrow">VR arena</p>
+            <h2>Tower Defense</h2>
+            <p>Open the deployed Tower Defense game on Render.</p>
+          </div>
+          <a id="towerDefenseLink" class="action action--primary" href="https://tower-defense-web.onrender.com/">
+            Open Tower Defense
+          </a>
+        </article>
+
+        <article class="game-card game-card--taptiles">
+          <div>
+            <p class="eyebrow">Tile puzzle</p>
+            <h2>Taptiles</h2>
+            <p>Open the deployed KP_2019 Taptiles game on Render.</p>
+          </div>
+          <a id="taptilesLink" class="action" href="#" aria-disabled="true">
+            Taptiles URL not set
+          </a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
