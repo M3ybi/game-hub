@@ -3,42 +3,99 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#101416" />
+    <meta name="theme-color" content="#f6f3ed" />
     <title>Game Hub</title>
     <link rel="stylesheet" href="/styles.css" />
     <script src="/main.js" defer></script>
   </head>
   <body>
     <main class="shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Shared launcher</p>
-          <h1>Game Hub</h1>
-        </div>
-        <span id="status" class="status">Loading links</span>
+      <header class="hero">
+        <nav class="nav" aria-label="Game hub status">
+          <a class="brand" href="/" aria-label="Game Hub home">
+            <span class="brand-mark" aria-hidden="true">GH</span>
+            <span>Game Hub</span>
+          </a>
+          <span id="status" class="status">Loading links</span>
+        </nav>
+
+        <section class="hero-body" aria-labelledby="pageTitle">
+          <div class="hero-copy">
+            <p class="eyebrow">Two deployed games</p>
+            <h1 id="pageTitle">Choose what to play</h1>
+            <p class="intro">
+              Launch Tower Defense or Taptiles from one clean page. Each game opens in its own Render deployment.
+            </p>
+          </div>
+          <div class="hero-meta" aria-label="Available games">
+            <div>
+              <strong>2</strong>
+              <span>Games</span>
+            </div>
+            <div>
+              <strong>Render</strong>
+              <span>Hosted</span>
+            </div>
+          </div>
+        </section>
       </header>
 
       <section class="game-grid" aria-label="Available games">
         <article class="game-card game-card--tower">
-          <div>
-            <p class="eyebrow">VR arena</p>
-            <h2>Tower Defense</h2>
-            <p>Open the deployed Tower Defense game on Render.</p>
+          <div class="game-media" aria-hidden="true">
+            <div class="tower-scene">
+              <span class="planet"></span>
+              <span class="target target--one"></span>
+              <span class="target target--two"></span>
+              <span class="beam"></span>
+            </div>
           </div>
-          <a id="towerDefenseLink" class="action action--primary" href="https://tower-defense-web.onrender.com/">
-            Open Tower Defense
-          </a>
+          <div class="game-content">
+            <div class="game-heading">
+              <div>
+                <p class="eyebrow">VR arena</p>
+                <h2>Tower Defense</h2>
+              </div>
+              <span class="pill">Live</span>
+            </div>
+            <p>
+              Configure a level, enter the arena, and compete on the Tower Defense leaderboard.
+            </p>
+            <a id="towerDefenseLink" class="action action--primary" href="https://tower-defense-web.onrender.com/">
+              Open Tower Defense
+            </a>
+          </div>
         </article>
 
         <article class="game-card game-card--taptiles">
-          <div>
-            <p class="eyebrow">Tile puzzle</p>
-            <h2>Taptiles</h2>
-            <p>Open the deployed KP_2019 Taptiles game on Render.</p>
+          <div class="game-media" aria-hidden="true">
+            <div class="tile-board">
+              <span>7</span>
+              <span>2</span>
+              <span>7</span>
+              <span>4</span>
+              <span>8</span>
+              <span>4</span>
+              <span>2</span>
+              <span>9</span>
+              <span>8</span>
+            </div>
           </div>
-          <a id="taptilesLink" class="action" href="#" aria-disabled="true">
-            Taptiles URL not set
-          </a>
+          <div class="game-content">
+            <div class="game-heading">
+              <div>
+                <p class="eyebrow">Tile puzzle</p>
+                <h2>Taptiles</h2>
+              </div>
+              <span id="taptilesState" class="pill pill--muted">Pending</span>
+            </div>
+            <p>
+              Match equal tiles through open routes and keep your score climbing.
+            </p>
+            <a id="taptilesLink" class="action" href="#" aria-disabled="true">
+              Taptiles URL not set
+            </a>
+          </div>
         </article>
       </section>
     </main>
