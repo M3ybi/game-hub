@@ -9,7 +9,7 @@ Set these variables on the `game-hub-web` service:
 
 ```properties
 TOWER_DEFENSE_URL=https://tower-defense-web.onrender.com/
-TAPTILES_URL=https://<your-taptiles-render-service>.onrender.com/taptiles-fedorco
+TAPTILES_URL=https://<your-taptiles-render-service>.onrender.com/taptiles
 ```
 
 `TAPTILES_URL` can stay unset until Taptiles is deployed. The hub will show the
